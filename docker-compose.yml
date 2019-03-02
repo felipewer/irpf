@@ -2,7 +2,7 @@ version: '3'
 
 services:
   irpf:
-    image: felipewer/irpf
+    image: douglascpiocm4u/irpf
     environment:
       - DISPLAY=$DISPLAY
     volumes:

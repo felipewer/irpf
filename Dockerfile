@@ -9,6 +9,8 @@ RUN wget http://downloadirpf.receita.fazenda.gov.br/irpf/2019/irpf/arquivos/IRPF
     && mv /opt/IRPF*/ /opt/irpf \
     && rm -rf irpf.zip
 
+ENV TZ=America/Sao_Paulo
+
 RUN groupadd --gid 1000 irpf && \
     useradd --gid 1000 --uid 1000 --create-home --shell /bin/bash irpf
 

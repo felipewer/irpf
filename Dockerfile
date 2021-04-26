@@ -1,10 +1,10 @@
-FROM openjdk:9
+FROM openjdk:11
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgtk2.0-0 libcanberra-gtk-module libxext-dev libxrender-dev libxtst-dev \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget http://downloadirpf.receita.fazenda.gov.br/irpf/2020/irpf/arquivos/IRPF2020-1.7.zip -O irpf.zip \
+RUN wget http://downloadirpf.receita.fazenda.gov.br/irpf/2021/irpf/arquivos/IRPF2021-1.2.zip -O irpf.zip \
     && unzip irpf.zip -d /opt/ \
     && mv /opt/IRPF*/ /opt/irpf \
     && rm -rf irpf.zip
